@@ -1,0 +1,26 @@
+{% include "head.html" %}
+
+<body>
+    <div></div>
+    <div>
+       
+        {% include "nav.html" %}
+
+        <div id="contentbox">
+            <p>Enter a URL to encode into a new QR Code</p>
+            <form method="post" action="/generate">
+            <label for="title">QRKit Generator</label>
+            <input type="text" name="url"
+                placeholder="URL to encode"
+                value="">
+            </input>
+
+        <button type="submit">Submit</button>
+        </form>
+ </div>
+        
+       
+    </div>
+    {% include "foot.html" %}
+</body>
+</html>

@@ -1,11 +1,19 @@
-<h1>QRKit.io</h1>
-<p>Enter a URL to encode into a new QR Code</p>
-<form method="post" action="/generate">
-    <label for="title">QRKit Generator</label>
-    <input type="text" name="url"
-           placeholder="URL to encode"
-           value="">
-    </input>
+{% include "head.html" %}
 
-    <button type="submit">Submit</button>
-</form>
+<body>
+    <div></div>
+    <div>
+       
+        {% include "nav.html" %}
+
+        <div id="contentbox">
+            <img src="/static/img/skates.jpg" style="text-align:center;align-content:center;">
+
+                <p>Use a QR Kit to provide information about anything you want: your garage sale items, your <a class="clink" href="travato/overview/">RV</a> or rental home, a <a href="http://qrkit.io/builder/?id=2">lampshade</a>, the plant species on your favorite walk. QRKit.io provides a helpful, hosted, beautiful experience to your customers, colleagues, and friends.</p>
+        </div>
+        
+       
+    </div>
+    {% include "foot.html" %}
+</body>
+</html>
