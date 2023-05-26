@@ -1,16 +1,19 @@
-from flask import Flask, send_file
+from flask import Flask, send_file, render_template, request
 import qrcode
+
+# @todo build a form to take submission from / to /generate
+# https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<b>QRKit</b> - Add information to your stuff'
+    return render_template('index.html')
 
-@app.route('/generate')
-def gen():
+@app.route('/generate', methods = ['POST', 'GET'])
+def generate():
     # Data to encode
-    data = "GeeksforGeeks"
+    data = request.form['url']
 
     # Creating an instance of QRCode class
     qr = qrcode.QRCode(version = 1,
