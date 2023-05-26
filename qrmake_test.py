@@ -21,10 +21,12 @@ def gen():
     qr.add_data(data)
     
     qr.make(fit = True)
-    img = qr.make_image(fill_color = 'red',
+    img = qr.make_image(fill_color = 'black',
                         back_color = 'white')
     
-    return send_file(img.open(fp, mode='r',formats=None), mimetype='image/gif')
+    fn = 'myfile.png'
+    img.save(fn)
+    return send_file(fn, mimetype='image/png')
 
 app.run(host='0.0.0.0', port=81)
 
