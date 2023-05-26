@@ -24,7 +24,7 @@ def gen():
     img = qr.make_image(fill_color = 'black',
                         back_color = 'white')
     
-    fn = 'myfile.png'
+    fn = 'assets/myfile.png'
     img.save(fn)
     return send_file(fn, mimetype='image/png')
 
