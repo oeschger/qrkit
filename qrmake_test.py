@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Web App with Python Flask!'
+    return '<b>QRKit</b> - Add information to your stuff'
 
-@app.route('/gen')
+@app.route('/generate')
 def gen():
     # Data to encode
     data = "GeeksforGeeks"
@@ -30,5 +30,10 @@ def gen():
 
 app.run(host='0.0.0.0', port=81)
 
+## prototype for managing args from form submit (?)
+# @app.route(...)
+# def login():
+#     username = request.args.get('username')
+#     password = request.args.get('password')
 
  
