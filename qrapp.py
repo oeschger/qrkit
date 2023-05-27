@@ -11,6 +11,15 @@ def index():
 def form():
     return render_template('form.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/stuff')
+def stuff():
+    return render_template('stuff.html')
+
+
 @app.route('/generate', methods = ['POST', 'GET'])
 def generate():
     # Data to encode
